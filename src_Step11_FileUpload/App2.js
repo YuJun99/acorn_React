@@ -54,7 +54,7 @@ function App2() {
                     <p>원본 파일명 : <strong>{fileData.orgFileName}</strong></p>
                     <p>저장 파일명 : <strong>{fileData.saveFileName}</strong></p>
                     <p>파일의 크기 : <strong>{fileData.fileSize}</strong></p>
-                    <a href="{fileData.url}">다운로드</a>
+                    <a href={fileData.url}>다운로드</a>
                 </div>
             }
         </div>
