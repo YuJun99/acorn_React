@@ -1,14 +1,23 @@
 // App.css 적용하기 (내부 css)
+import { NavLink, useOutlet } from 'react-router-dom';
 import './App.css'
+//bootstrap css 로딩하기
+import 'bootstrap/dist/css/bootstrap.css'
+import BsNavBar from './components/BsNavBar';
 
 //함수형 component
 function App() {
 
+  //현재 route 된 정보를 출력해주는 hook
+  const currentOutlet = useOutlet()
+
   return (
-    <div className="container">
-      <h1>인덱스 페이지 입니다</h1>
-      
-    </div>
+    <>
+      <BsNavBar/>
+      <div className="container">
+        <div>{currentOutlet}</div>
+      </div>
+    </>
   );
 }
 
